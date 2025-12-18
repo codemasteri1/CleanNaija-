@@ -19,10 +19,11 @@ function render() {
         <strong>${item.city}, ${item.state}</strong> (${item.type})
         <p>${item.address}</p>
         <p>${item.description}</p>
-        <small>Status: ${item.cleaned ? 'Cleaned' : 'Pending'}</small>
+        <strong>Status: ${item.cleaned ? 'Cleaned' : 'Pending'}</strong>
       </div>
       <div class="actions">
         <button onclick="toggle(${index})">✔</button>
+        <button onclick="toggle(${index})">ᴒ</button>
         <button onclick="removeWaste(${index})">✖</button>
       </div>
     `;

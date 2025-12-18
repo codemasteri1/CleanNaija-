@@ -59,6 +59,7 @@ button:hover {
 }
 
 .waste-card {
+  background-color: rgb(255, 0, 0);
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -67,18 +68,23 @@ button:hover {
 }
 
 .waste-card.cleaned {
-  background: #e8fff3;
+  background: green;
 }
 
 .actions button {
+  /* background-color: red; */
+  color: white;
   margin-left: 6px;
   padding: 6px 10px;
   font-size: 0.8rem;
 }
-
+.actions button::after {
+  background-color: green;
+}
 .footer {
   text-align: center;
   margin-top: 20px;
   font-size: 0.8rem;
   color: #666;
 }
+
