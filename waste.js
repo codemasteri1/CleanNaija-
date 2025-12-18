@@ -3,6 +3,11 @@ const wasteList = document.getElementById('wasteList');
 
 let wastes = JSON.parse(localStorage.getItem('wastes')) || [];
 
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  themeToggle.textContent =
+    document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
 function save() {
   localStorage.setItem('wastes', JSON.stringify(wastes));
 }
@@ -21,6 +26,7 @@ function render() {
         <p>${item.description}</p>
         <strong>Status: ${item.cleaned ? 'Cleaned' : 'Pending'}</strong>
       </div>
+
       <div class="actions">
         <button onclick="toggle(${index})">✔</button>
         <button onclick="toggle(${index})">ᴒ</button>
